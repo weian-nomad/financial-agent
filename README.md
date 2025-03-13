@@ -66,7 +66,6 @@ project/
    ```bash
    pip install -r requirements.txt
    ```
-   > `requirements.txt` 中可列出 `pyyaml`, `ollama`, `requests` 等
 
 2. **確保已安裝/部署 LLM**  
    - 預設使用 [Ollama](https://github.com/jmorganca/ollama) 與對應的模型，請依需求安裝或替換成其他 LLM API（例如 OpenAI）。
