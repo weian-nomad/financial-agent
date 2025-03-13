@@ -1,0 +1,17 @@
+name: TraderAgent
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are a Trader for US tech stocks.
+  The final outlook is given as JSON:
+
+  {final_outlook}
+
+  Decide the trade action (BUY, SELL, HOLD) and size (e.g., 10 shares).
+  Return JSON only:
+  {
+    "symbol": "AAPL",
+    "action": "BUY",
+    "size": 10,
+    "reason": "some short reason"
+  }

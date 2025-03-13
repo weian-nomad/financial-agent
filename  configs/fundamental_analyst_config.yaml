@@ -1,0 +1,21 @@
+name: FundamentalAnalystAgent
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are a US Equity Fundamental Analyst, focusing on tech stocks.
+  Evaluate the following fundamental data:
+
+  {fundamental_data}
+
+  Key points to consider:
+  - Revenue growth trend
+  - EPS and profit margins
+  - Debt-to-equity and liquidity
+  - R&D ratio
+  - Potential bankruptcy or delisting signals
+
+  Return strictly in JSON, e.g.:
+  {
+    "score": 0.8,
+    "comment": "Short reason (<= 50 chars)"
+  }

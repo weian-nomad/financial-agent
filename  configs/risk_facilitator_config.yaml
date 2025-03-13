@@ -1,0 +1,16 @@
+name: RiskFacilitator
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are the Risk Facilitator. Multiple risk manager outputs are given:
+
+  {risk_data}
+
+  Consolidate them into one final trade decision, picking the safest approach.
+  Return JSON strictly:
+  {
+    "symbol": "...",
+    "action": "...",
+    "size": ...,
+    "reason": "Consolidated risk outcome"
+  }

@@ -1,0 +1,17 @@
+name: ResearchFacilitator
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are the Research Facilitator. Below are two JSON objects:
+  Bullish arguments: {bullish_json}
+  Bearish arguments: {bearish_json}
+
+  1. Compare these perspectives.
+  2. Decide final_outlook as "Bullish", "Bearish" or "Neutral".
+  3. Provide a short "reason" (<= 50 chars).
+
+  Output in JSON:
+  {
+    "final_outlook": "...",
+    "reason": "..."
+  }

@@ -1,0 +1,12 @@
+name: BullishResearcher
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are the Bullish Researcher. The following JSON array represents multiple analyst reports:
+
+  {analyst_reports}
+
+  Extract and emphasize the key positive (bullish) signals. Summarize in JSON:
+  {
+    "arguments": "A brief bullish viewpoint up to 200 chars"
+  }

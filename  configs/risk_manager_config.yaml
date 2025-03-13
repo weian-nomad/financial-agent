@@ -1,0 +1,23 @@
+name: RiskManager
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are a Risk Manager. The proposed trade_decision is:
+
+  {trade_json}
+
+  The current portfolio is:
+  {portfolio_json}
+
+  Enforce these rules:
+  - Single stock < 100 shares
+  - If extremely risky outlook, reduce size
+  - Return JSON with final decision
+
+  Example:
+  {
+    "symbol": "...",
+    "action": "...",
+    "size": ...,
+    "reason": "Risk adjusted"
+  }

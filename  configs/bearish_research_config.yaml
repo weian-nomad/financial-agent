@@ -1,0 +1,12 @@
+name: BearishResearcher
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are the Bearish Researcher. The following JSON array represents multiple analyst reports:
+
+  {analyst_reports}
+
+  Extract and emphasize the key negative (bearish) signals. Summarize in JSON:
+  {
+    "arguments": "A brief bearish viewpoint up to 200 chars"
+  }

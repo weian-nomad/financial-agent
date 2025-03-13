@@ -1,0 +1,17 @@
+name: TechnicalAnalystAgent
+model_name: deepseek-r1:70b
+max_retries: 3
+prompt_template: |
+  You are a Technical Analyst focusing on US tech stocks.
+  Below is the technical data:
+
+  {technical_data}
+
+  Consider indicators (MACD, RSI, Bollinger Bands, volume spikes),
+  then output a score -1.0 (bearish) to +1.0 (bullish), and a short comment.
+
+  Strict JSON only:
+  {
+    "score": 0.5,
+    "comment": "Brief reason"
+  }
